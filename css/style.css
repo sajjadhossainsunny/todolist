@@ -1,0 +1,217 @@
+/* font-family: 'Poppins', sans-serif; */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#todo_page {
+    height: 100vh;
+    display: flex;
+    padding-top: 50px;
+    background: #0a00c8;
+}
+
+.todo_card {
+    padding: 10px 50px 15px;
+    width: 45vw;
+    height: 70vh;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.main {
+    height: 100%;
+    overflow: hidden;
+}
+
+.todo_card h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.input,
+.input2 {
+    width: 100%;
+    padding: 7px 15px;
+    border-radius: 100px;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    background: rgba(10, 0, 200, 0.2);
+}
+
+.input::placeholder,
+.input2::placeholder {
+    color: #3c3c3c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.input:focus,
+.input2:focus {
+    outline: 0;
+}
+
+.sub_btn {
+    width: 30%;
+    height: 35px;
+    border-radius: 100px;
+    border: 0;
+    background: #6cbfff;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.sub_btn h6 {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.sub_btn h6::selection {
+    user-select: none;
+}
+
+.sub_btn::after {
+    content: '';
+    width: 0%;
+    height: 100%;
+    background: #37a8ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s linear;
+}
+
+.sub_btn:hover::after {
+    width: 100%;
+}
+
+ul {
+    border-top: 2px solid #000;
+}
+
+li {
+    width: 100%;
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 7px;
+    background: rgba(10, 0, 200, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+li p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.text {
+    width: 60%;
+}
+
+.remove {
+    padding: 7px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 0;
+    background: rgb(255, 116, 139);
+    color: #fff;
+}
+
+
+@media (min-width: 250px) and (max-width: 750px) {
+    #todo_page {
+        padding-top: 20px;
+    }
+
+    .todo_card {
+        padding: 10px 20px 15px;
+        width: 92%;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .input,
+    .input2 {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    .sub_btn h6 {
+        font-size: 14px;
+    }
+
+    .sub_btn {
+        margin-bottom: 10px;
+    }
+
+    li h4 {
+        font-size: 16px;
+    }
+
+    li p {
+        font-size: 13px;
+    }
+
+    .remove {
+        font-size: 13px;
+    }
+
+    .text {
+        width: 70%;
+    }
+}
